@@ -11,7 +11,7 @@ public class MyVector {
 //		elements.pushBack(99);
 		System.out.println(elements.capacity());
 		System.out.println();
-		
+		elements.setElement(5, 123);
 		elements.popFront();
 		
 		for (int i = 0; i < elements.capacity(); i++) {
@@ -31,12 +31,20 @@ public class MyVector {
 	}
 	
 	public Object getElement(int index) {
-		if (index > this.capacity()) {
+		try {
+			return this.values[index - 1];
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(e);
 			return null;
 		}
-		else {
-			return this.values[index - 1];
-		}	
+	}
+	
+	public void setElement(int index, int value) {
+		try {
+			this.values[index] = value;
+		} catch (ArrayIndexOutOfBoundsException e){
+			System.out.println(e);
+		}
 	}
 	
 	public int size() {
