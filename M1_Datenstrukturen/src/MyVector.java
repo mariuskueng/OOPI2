@@ -1,8 +1,10 @@
 
 public class MyVector {
 	
+	private int[] values;
+	
 	public static void main(String[] args) {
-		
+		System.out.println("MyVector");
 //		MyVector elements = new MyVector(10);
 		int[] array = {1, 2, 3};//, 4, 5, 6, 0, 8, 9, 10};
 		MyVector elements = new MyVector(array);
@@ -17,9 +19,18 @@ public class MyVector {
 		for (int i = 0; i < elements.capacity(); i++) {
 			System.out.println(i+1 + ": " + elements.getElement(i + 1));
 		}
+		
+		System.out.println("\nListElement");
+		
+		ListElement MyListElement1 = new ListElement(10, null);
+		ListElement MyListElement2 = new ListElement(20, null);
+		
+		List list = new List(MyListElement1, MyListElement2);
+		System.out.println(list.getHead().getValue());
+		System.out.println(list.getTail().getValue());
+		System.out.println(list.getSize());
+		list.append(MyListElement2);
 	}
-	
-	private int[] values;
 	
 	
 	public MyVector(int capacity) {
