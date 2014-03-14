@@ -32,9 +32,11 @@ public class Resultate <T extends Sportler>{
 		Resultate<Rennfahrer> sr1 = new Resultate<Rennfahrer>();
 		sr1.add(new Rennfahrer(100));
 		
-		Resultate<Sportler> sr2= new Resultate<Sportler>(); 
+		Resultate<Sportler> sr2= new Resultate<Sportler>();
+		// Cannot instance object of an interface
 		sr2.add(new Sportler()); // Interface
 		
+		// Cannot create a Sportler of Eiskunstlaeufer
 		Resultate<Sportler> sr3= new Resultate<Eiskunstlaeufer>();
 		sr3.add(new Eiskunstlaeufer());
 		
@@ -45,10 +47,12 @@ public class Resultate <T extends Sportler>{
 		Resultate<Sportler> sr5= new Resultate<Sportler>();
 		sr5.add(new Rennfahrer());
 		
+		// sr5 is a Sportler not Rennfahrer, missing cast
 		Rennfahrer r= sr5.getWinner();
 		Resultate<?> sr6= new Resultate<Rennfahrer>();
 		sr5.add(new Rennfahrer());
 		
+		// sr5 is a Sportler not Rennfahrer, missing cast
 		Rennfahrer rf= sr5.getWinner();
 		Resultate<? extends Rennfahrer> sr7= new Resultate<Rennfahrer>();
 		sr7.add(new Rennfahrer());
@@ -56,6 +60,7 @@ public class Resultate <T extends Sportler>{
 		Rennfahrer rf7= sr7.getWinner();
 		Resultate<? super Rennfahrer> sr8= new Resultate<Rennfahrer>();
 		
+		// Cast to Rennfahrer missing
 		sr8.add(new Rennfahrer());
 		Rennfahrer rf8= sr8.getWinner();
 
