@@ -53,6 +53,8 @@ public class BossPuzzle extends JFrame implements ActionListener{
 		startButton.addActionListener(new ActionListener(){
 		     public void actionPerformed(ActionEvent e) {
 		    	 mixPuzzle();
+		    	 moveCount = 0;
+		    	 ausgabe.setText("");
 		     }
 		});
 		
@@ -195,6 +197,7 @@ public class BossPuzzle extends JFrame implements ActionListener{
 			
 			ausgabe.setText("Gelöst mit " + moveCount + " Zügen");
 			this.repaint();
+			moveCount = 0;
 			}
 		}
 	}
