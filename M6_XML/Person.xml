@@ -1,0 +1,36 @@
+<!DOCTYPE personen SYSTEM "Person.dtd">
+<personen>
+<person id="1">
+<male/>
+<nachname>Scholz</nachname>
+<vorname>Michael</vorname>
+<hobbys>
+<hobby>Java</hobby>
+<hobby>XML</hobby>
+<hobby>Groovy</hobby>
+</hobbys>
+</person>
+<person id="2">
+<male/>
+<nachname>Niedermeier</nachname>
+<vorname>Stephan</vorname>
+<hobbys>
+<hobby>Java</hobby>
+<hobby>XML</hobby>
+<hobby>Cocoon</hobby>
+</hobbys>
+</person>
+<person id="3">
+<male/>
+<nachname>Skulschus</nachname>
+<vorname>Marco</vorname>
+</person>
+<person id="4">
+<nachname>Lovelace</nachname>
+<vorname>Ada</vorname>
+<hobbys>
+<hobby>Ada</hobby>
+<hobby>Analytical Engine</hobby>
+</hobbys>
+</person>
+</personen>

@@ -1,0 +1,8 @@
+<!ELEMENT personen (person)*>
+<!ELEMENT person (male?, nachname, vorname, hobbys?)>
+<!ELEMENT male EMPTY>
+<!ELEMENT nachname (#PCDATA)>
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT hobbys (hobby)*>
+<!ELEMENT hobby (#PCDATA)>
+<!ATTLIST person id CDATA #IMPLIED>
