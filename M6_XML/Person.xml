@@ -1,6 +1,6 @@
 <!DOCTYPE personen SYSTEM "Person.dtd">
 <personen>
-<person id="1">
+<person id="1" istNett="NEIN" asdf="Ja">
 <male/>
 <nachname>Scholz</nachname>
 <vorname>Michael</vorname>

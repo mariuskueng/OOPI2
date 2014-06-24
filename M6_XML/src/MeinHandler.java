@@ -23,7 +23,7 @@ public class MeinHandler extends DefaultHandler{
 	@Override
 	public void startElement(String uri, String localName, String qName,
 			Attributes atts) throws SAXException {
-		System.out.println("StartTag </"+qName+">");
+		System.out.println("StartTag <"+qName+">");
 		for (int i = 0; i < atts.getLength(); i++) {
 			System.out.println(atts.getLocalName(i)+": "+atts.getValue(i));
 		}
